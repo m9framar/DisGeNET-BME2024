@@ -14,6 +14,11 @@ The goal of this project is to create a graph neural network for predicting dise
 
 [DisGeNET](https://www.disgenet.org/)
 
+### The DISGENET schema
+
+DISGENET data is standardized using community-supported standards and ontologies. The data can be filtered and selected by using different attributes, metrics and scores available for the genes, variants, diseases and their associations.
+![Disgenet Schema](https://disgenet.com/static/images/Release_DGNplusSchema_SVG.svg)
+
 ## Related GitHub Repository
 
 [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric)
