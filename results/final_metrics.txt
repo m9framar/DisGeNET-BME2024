@@ -1,0 +1,3 @@
+Final Training Loss: 1.1401
+Final Validation AUC: 0.8111
+Final Test AUC: 0.8083

@@ -1,0 +1,6 @@
+
+Prediction Score Distribution:
+Predictions >= 0.3: 666 (37.3%)
+Predictions >= 0.5: 465 (26.1%)
+Predictions >= 0.7: 296 (16.6%)
+Predictions >= 0.9: 5 (0.3%)
