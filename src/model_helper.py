@@ -269,7 +269,8 @@ def train_model(model, train_loader, val_loader, test_loader, num_epochs=100, pa
 def get_and_save_novel_predictions(model, data, mapping,device, batch_size=1024, output_file_prefix='novel_predictions'):
     import pandas as pd
     model.eval()
-    
+    #it can be put next to the model file
+    output_file = get_model_path('novel_predictions.csv')
     # Get ALL known edges from original data
     known_edges = set((int(i), int(j)) for i, j in data['gene', 'associates_with', 'disease'].edge_index.t().tolist())
     print(f"Known edges in original data: {len(known_edges)}")
