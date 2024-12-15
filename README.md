@@ -28,5 +28,36 @@ DISGENET data is standardized using community-supported standards and ontologies
 - [Paper 1](https://arxiv.org/abs/1607.00653)
 - [Paper 2](https://arxiv.org/abs/1611.07308)
 
-## How to Run
+## Usage
 
+### Training and Evaluation
+
+To train and evaluate the model:
+
+1. Build the Docker image:
+      ```bash
+      docker build -t gene-disease-predictor .
+      ```
+
+2. Run and save results:
+      ```bash
+      docker run -v ${PWD}/results:/app/results gene-disease-predictor
+      ```
+
+This will train the model, evaluate it, then generate training metrics/plots, along with predictions for the dataset.
+
+### Data Generation
+
+For generating and cleaning the DisGeNET data:
+
+1. Build the Docker image:
+      ```bash
+      docker build -t data-prep -f data_prep.Dockerfile .
+      ```
+
+2. Run to call the API, scrape, and clean results:
+      ```bash
+      docker run -e DISGENET_API_KEY=[YOUR_KEY] -v ${PWD}/data:/app/data data-prep
+      ```
+
+This will create `finalized_data.csv` in the `data` folder of the project.
