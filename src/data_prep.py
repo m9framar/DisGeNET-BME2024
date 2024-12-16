@@ -198,6 +198,13 @@ def process_data(df):
     # Standardize disease names
     replacements = standardize_disease_names()
     df_filtered['diseaseName'] = df_filtered['diseaseName'].replace(replacements)
+    # Create sequential indices for unique genes and diseases
+    gene_mapping = {gene: idx for idx, gene in enumerate(df_filtered['geneNcbiID'].unique())}
+    disease_mapping = {disease: idx for idx, disease in enumerate(df_filtered['diseaseName'].unique())}
+    
+    # Add index columns
+    df_filtered['gene_index'] = df_filtered['geneNcbiID'].map(gene_mapping)
+    df_filtered['disease_index'] = df_filtered['diseaseName'].map(disease_mapping)
     
     return df_filtered
 
