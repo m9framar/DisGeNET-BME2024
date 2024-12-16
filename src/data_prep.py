@@ -45,6 +45,7 @@ def get_api_data(api_key):
 
 def standardize_disease_names():
     return {
+    "Alzheimer's disease": 'Alzheimer Disease',
     "Alzheimer's dementia senile and presenile forms": 'Alzheimer Disease',
     "familial alzheimer's disease": 'Alzheimer Disease',
     'AMYOTROPHIC LATERAL SCLEROSIS-PARKINSONISM/DEMENTIA COMPLEX 1': 'Parkinson Disease',
@@ -84,20 +85,19 @@ def standardize_disease_names():
     'Primary hypothyroidism':'Hypothyroidism',
     'central hypothyroidism':'Hypothyroidism',
     # Alzheimer's Disease
-    "Alzheimer's Disease": "Alzheimer's Disease",
-    "Familial Alzheimer's Disease": "Alzheimer's Disease",
-    
+    "Familial Alzheimer's Disease": "Alzheimer Disease",
+
     # Parkinson's Disease
-    "Parkinson's Disease": "Parkinson's Disease",
-    "Hemiparkinsonism": "Parkinson's Disease",
-    "Primary Parkinsonism": "Parkinson's Disease",
-    "Idiopathic Parkinsonism": "Parkinson's Disease",
-    "Amyotrophic Lateral Sclerosis-Parkinsonism/Dementia Complex 1": "Parkinson's Disease",
+    "Parkinson's Disease": "Parkinson Disease",
+    "Hemiparkinsonism": "Parkinson Disease",
+    "Primary Parkinsonism": "Parkinson Disease",
+    "Idiopathic Parkinsonism": "Parkinson Disease",
+    "Amyotrophic Lateral Sclerosis-Parkinsonism/Dementia Complex 1": "Parkinson Disease",
     
     # Huntington's Disease
-    "Huntington's Disease": "Huntington's Disease",
-    "Chorea, Huntington": "Huntington's Disease",
-    "Dementia in Huntington's Disease": "Huntington's Disease",
+    "Huntington's Disease": "Huntington Disease",
+    "Chorea, Huntington": "Huntington Disease",
+    "Dementia in Huntington's Disease": "Huntington Disease",
     
     # Duchenne Muscular Dystrophy
     "Duchenne Muscular Dystrophy": "Duchenne Muscular Dystrophy",
