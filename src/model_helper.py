@@ -270,7 +270,7 @@ def get_and_save_novel_predictions(model, data, mapping,device, batch_size=1024,
     import pandas as pd
     model.eval()
     #it can be put next to the model file
-    output_file = get_model_path('novel_predictions.csv')
+    
     # Get ALL known edges from original data
     known_edges = set((int(i), int(j)) for i, j in data['gene', 'associates_with', 'disease'].edge_index.t().tolist())
     print(f"Known edges in original data: {len(known_edges)}")
@@ -281,6 +281,7 @@ def get_and_save_novel_predictions(model, data, mapping,device, batch_size=1024,
     # Add timestamp to output file
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     output_file = f"{output_file_prefix}_{timestamp}.csv"
+    output_file = get_model_path(output_file)
     
     if not os.path.exists(output_file):
         pd.DataFrame(columns=['gene_idx', 'disease_idx', 'gene_ncbi', 'disease_name', 'prediction_score']).to_csv(output_file, index=False)
